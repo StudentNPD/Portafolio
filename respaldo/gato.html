@@ -45,6 +45,9 @@
                         <a class="nav-link" href="#tools">Herramientas</a>
                     </li>
                 </ul>
+                <!-- <button id="themeToggle" class="btn btn-theme-toggle">
+                    🌓
+                </button> -->
                 <label class="switch ">
                     <input id="themeToggle" type="checkbox">
                     <span class="slider btn btn-theme-toggle"></span>
@@ -74,17 +77,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#tools">Herramientas</a>
                     </li>
-                    <li class="nav-item switch">
-                        <!-- <button id="mobileThemeToggle" class="btn btn-theme-toggle w-100 mt-3">
-                            🌓 Cambiar Tema
-                        </button> -->
-                        <label class=" switch ">
-                            <input id="mobileThemeToggle" type="checkbox">
-                            <span class="slider btn btn-theme-toggle"></span>
-                        </label>
-
-                    </li>
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -92,6 +86,7 @@
     <!-- Main Content -->
     <div class="container pt-5">
         <!-- Your existing content goes here -->
+        <!-- Add padding to the top to account for fixed navbar -->
     </div>
 
 
@@ -190,51 +185,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('themeToggle');
-            const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-            const body = document.body;
+        // Modo oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
 
-            // Function to apply theme
-            const applyTheme = (theme) => {
-                body.classList.toggle('dark-mode', theme === 'dark');
-                localStorage.setItem('theme', theme);
-            };
-
-            // Check for saved theme preference
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            applyTheme(savedTheme);
-
-            // Desktop theme toggle
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const currentTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
-                    applyTheme(currentTheme);
-
-                    // Sync mobile toggle if it exists
-                    if (mobileThemeToggle) {
-                        mobileThemeToggle.textContent = currentTheme === 'dark' ? '☀️ Modo Claro' : '🌓 Modo Oscuro';
-                    }
-                });
-            }
-
-            // Mobile theme toggle
-            if (mobileThemeToggle) {
-                mobileThemeToggle.addEventListener('click', () => {
-                    const currentTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
-                    applyTheme(currentTheme);
-
-                    // Update button text
-                    mobileThemeToggle.textContent = currentTheme === 'dark' ? '☀️ Modo Claro' : '🌓 Modo Oscuro';
-
-                    // Sync desktop toggle if it exists
-                    if (themeToggle) {
-                        themeToggle.textContent = currentTheme === 'dark' ? '☀️ Modo Claro' : '🌓 Modo Oscuro';
-                    }
-                });
-            }
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
         });
 
+        // Quiz interactivo
+        const questions = [
+            {
+                question: "¿Cuál es mi lenguaje de programación favorito?",
+                options: ["Python", "JavaScript", "Rust", "Java"],
+                correctAnswer: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function checkAnswer(selectedIndex) {
+            const questionContainer = document.getElementById('quizContainer');
+            const resultElement = document.getElementById('quizResult');
+
+            if (selectedIndex === questions[currentQuestion].correctAnswer) {
+                resultElement.textContent = "¡Respuesta correcta!";
+                score++;
+            } else {
+                resultElement.textContent = "Respuesta incorrecta";
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion < questions.length) {
+                setTimeout(() => {
+                    document.getElementById('quizQuestion').textContent = questions[currentQuestion].question;
+                    const optionsContainer = document.getElementById('quizOptions');
+                    optionsContainer.innerHTML = questions[currentQuestion].options.map((option, index) =>
+                        `<button class="btn btn-outline-primary m-2" onclick="checkAnswer(${index})">${option}</button>`
+                    ).join('');
+                    resultElement.textContent = "";
+                }, 1500);
+            } else {
+                setTimeout(() => {
+                    questionContainer.innerHTML = `<h4>Tu puntuación: ${score} / ${questions.length}</h4>`;
+                }, 1500);
+            }
+        }
     </script>
 </body>
 
