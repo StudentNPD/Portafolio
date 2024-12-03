@@ -30,7 +30,7 @@ Soy Natalia Peña, una desarrolladora web junior apasionada por crear soluciones
 ### Pasos de Instalación
 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tuusuario/portfolio.git
+git clone https://github.com/StudentNPD/Portafolio.git
 cd portfolio
 ```
 
