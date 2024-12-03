@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+}
+
+body {
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.hobby-gallery img {
+  transition: transform 0.3s ease;
+}
+
+.hobby-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.timeline-item {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
