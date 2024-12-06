@@ -774,7 +774,7 @@ input:checked + .slider:before {
 
 .skill-badge {
   background: linear-gradient(135deg, #4f46e5, #3b82f6);
-  color: white;
+  /* color: white; */
   padding: 0.8rem 1rem;
   border-radius: 12px;
   font-size: 0.9rem;
@@ -1172,7 +1172,7 @@ section {
 }
 
 .about-title {
-  color: white;
+  /* color: white; */
   margin-bottom: 1.5rem;
   text-align: center;
   font-family: var(--font-primary, "Poppins", sans-serif);
@@ -1180,14 +1180,14 @@ section {
 }
 
 .about-text {
-  color: rgba(255, 255, 255, 0.9);
+  /* color: rgba(255, 255, 255, 0.9); */
   line-height: 1.6;
   margin-bottom: 2rem;
   font-family: var(--font-secondary, "Inter", sans-serif);
 }
 
 .skills-title {
-  color: white;
+  /* color: white; */
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -1221,7 +1221,7 @@ section {
 }
 
 .skill-badge span {
-  color: white;
+  /* color: white; */
   font-size: 0.9rem;
 }
 
