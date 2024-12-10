@@ -63,7 +63,7 @@ body.dark-mode {
 }
 
 .dark-mode a {
-  color: var(--primary-color);
+  color: var(--dark-text);
 }
 
 .dark-mode .navbar-brand {
@@ -342,6 +342,12 @@ input:checked + .slider:before {
 
 .elegant-modal.show .modal-content {
   transform: scale(1);
+}
+
+@media screen and (min-width: 1024px) {
+  .elegant-modal.show .modal-content {
+    transform: scale(1.7);
+  }
 }
 
 .btn-close {
