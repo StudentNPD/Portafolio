@@ -229,6 +229,8 @@
 
 
 
+
+
     <!-- Seccion cards de proyectos -->
     <div id="proyectos" class="container mt-5">
         <!-- Header with Search -->
@@ -237,129 +239,35 @@
             <!-- <h2 class="display-6 fw-bold mb-3">Proyectos</h2> -->
             <!-- <p class="lead text-gray-300 mb-0">Formación profesional y especialización continua</p> -->
         </div>
-
-
-        <!-- Projects List -->
-        <div class="row">
-            <!-- Project Card 1 -->
-            <div class="col-12">
-                <div class="card project-card">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="assets/img/203.png" class="project-image w-100" alt="E-Commerce Platform">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body d-flex flex-column h-100">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="card-title">Gestión Inmobiliaria</h5>
-                                    <span class="text-muted small">Marzo 2024</span>
-                                </div>
-                                <p class="card-text">Plataforma web para gestión de arriendos en Chile, facilitando la
-                                    conexión entre arrendadores y arrendatarios.</p>
-                                <div class="mb-3">
-                                    <span class="tech-badge bg-primary text-white">HTML5</span>
-                                    <span class="tech-badge bg-warning text-white">CSS3</span>
-                                    <span class="tech-badge bg-info text-white">Bootstrap</span>
-
-                                    <!-- Backend -->
-                                    <span class="tech-badge bg-danger text-white">Django</span>
-
-                                    <!-- Database -->
-                                    <span class="tech-badge bg-warning text-dark">PostgreSQL</span>
-                                </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <button class="btn btn-outline-primary" data-bs-toggle="modal"
-                                        data-bs-target="#projectModal1" onclick="openModal()">
-                                        Ver más <i class="fas fa-arrow-right ms-2"></i>
-                                    </button>
-                                    <div class="project-links">
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Project Card -->
+        <div class="project-card">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="assets/img/203.png" alt="Project Image" class="project-image">
                     </div>
                 </div>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="col-12">
-                <div class="card project-card">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="assets/img/203.png" class="project-image w-100" alt="Task Manager">
-                            </div>
+                <div class="col-md-8">
+                    <div class="project-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">Gestión Inmobiliaria</h5>
+                            <span class="text-muted small">Marzo 2024</span>
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body d-flex flex-column h-100">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="card-title">Task Manager App</h5>
-                                    <span class="text-muted small">Febrero 2024</span>
-                                </div>
-                                <p class="card-text">Aplicación de gestión de tareas con colaboración en tiempo
-                                    real,
-                                    asignación de proyectos y seguimiento de progreso. Incluye tableros Kanban y
-                                    reportes detallados.</p>
-                                <div class="mb-3">
-                                    <span class="tech-badge bg-warning text-dark">Vue.js</span>
-                                    <span class="tech-badge bg-danger text-white">Firebase</span>
-                                    <span class="tech-badge bg-secondary text-white">Tailwind</span>
-                                </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <button class="btn btn-outline-primary" data-bs-toggle="modal"
-                                        data-bs-target="#projectModal1" onclick="openModal()">
-                                        Ver más <i class="fas fa-arrow-right ms-2"></i>
-                                    </button>
-                                    <div class="project-links">
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <p>Plataforma web para gestión de arriendos en Chile, facilitando la conexión entre arrendadores
+                            y arrendatarios.</p>
+                        <div class="tech-stack mb-3">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">PostgreSQL</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="col-12">
-                <div class="card project-card">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <div class="image-container">
-                                <img src="assets/img/203.png" class="project-image w-100" alt="Weather Dashboard">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body d-flex flex-column h-100">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="card-title">Weather Dashboard</h5>
-                                    <span class="text-muted small">Enero 2024</span>
-                                </div>
-                                <p class="card-text">Dashboard del clima con pronósticos detallados, alertas
-                                    meteorológicas y visualización de datos históricos. Integración con
-                                    múltiples APIs
-                                    de pronóstico.</p>
-                                <div class="mb-3">
-                                    <span class="tech-badge bg-primary text-white">TypeScript</span>
-                                    <span class="tech-badge bg-success text-white">Express</span>
-                                    <span class="tech-badge bg-info text-white">Chart.js</span>
-                                </div>
-                                <div class="mt-auto d-flex justify-content-between align-items-center">
-                                    <button class="btn btn-outline-primary" data-bs-toggle="modal"
-                                        data-bs-target="#projectModal1" onclick="openModal()">
-                                        Ver más <i class=" fas fa-arrow-right ms-2"></i>
-                                    </button>
-                                    <!-- <button class="btn btn-primary" onclick="openModal()">Abrir Proyecto</button> -->
-                                    <div class="project-links">
-                                        <a href="#"><i class="fab fa-github"></i></a>
-                                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                                    </div>
-                                </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-outline-primary" onclick="openModal()">
+                                Ver más <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                            <div class="project-links">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -367,24 +275,24 @@
             </div>
         </div>
 
-        <!-- Modales -->
+        <!-- Modal -->
         <div class="elegant-modal" id="elegantModal">
             <div class="modal-content">
                 <button type="button" class="btn-close" onclick="closeModal()"></button>
-                <h5 class="modal-title">E-Commerce Platform</h5>
+                <h5 class="modal-title">Gestión Inmobiliaria</h5>
 
-                <div class="row g-4">
-                    <div class="col-md-6">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
                         <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="assets/img/Browsers.png" class="d-block w-100" alt="Screenshot 1">
+                                    <img src="assets/img/203.png" class="d-block w-100 " alt="Screenshot 1">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/img/203.png" class="d-block w-100" alt="Screenshot 2">
+                                    <img src="assets/img/203.png" class="d-block w-100 " alt="Screenshot 2">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/img/203.png" class="d-block w-100" alt="Screenshot 3">
+                                    <img src="assets/img/203.png" class="d-block w-100 " alt="Screenshot 3">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
@@ -404,7 +312,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-lg-5">
                         <p class="mb-3" style="font-size: 0.875rem;">
                             Plataforma web para gestión de arriendos en Chile, facilitando la conexión entre
                             arrendadores y arrendatarios.
@@ -415,27 +323,20 @@
                             <li><i class="fas fa-check-circle"></i> Sistema de autenticación de usuarios</li>
                             <li><i class="fas fa-check-circle"></i> Publicación y gestión de propiedades</li>
                             <li><i class="fas fa-check-circle"></i> Sistema de búsqueda avanzada</li>
-                            <!-- <li><i class="fas fa-check-circle"></i> Integración con pasarela de pagos</li>
-                            <li><i class="fas fa-check-circle"></i> Sistema de notificaciones</li> -->
                         </ul>
 
                         <div class="d-flex flex-wrap mt-3">
-                            <span class="tech-badge bg-primary text-white">HTML5</span>
-                            <span class="tech-badge bg-warning text-white">CSS3</span>
-                            <span class="tech-badge bg-info text-white">Bootstrap</span>
-
-                            <!-- Backend -->
-                            <span class="tech-badge bg-danger text-white">Django</span>
-
-                            <!-- Database -->
-                            <span class="tech-badge bg-warning text-dark">PostgreSQL</span>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">PostgreSQL</span>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="modal-actions">
-                    <a href="#" class="btn btn-outline-dark">
+                    <a href="#" class="btn btn-outline-primary">
                         <i class="fab fa-github me-1"></i>Ver Código
                     </a>
                     <a href="#" class="btn btn-primary">
@@ -445,80 +346,74 @@
             </div>
         </div>
 
-        <!-- Modal Proyecto 2 -->
-        <div class="modal fade" id="projectModal2" tabindex="-1" aria-hidden="true">
-            <!-- Similar estructura al Modal 1, pero con contenido específico del proyecto 2 -->
-        </div>
-
-        <!-- Modal Proyecto 3 -->
-        <div class="modal fade" id="projectModal3" tabindex="-1" aria-hidden="true">
-            <!-- Similar estructura al Modal 1, pero con contenido específico del proyecto 3 -->
-        </div>
-    </div>
 
 
-    <section id="educacion" class="education-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3">Educación</span>
-                <h2 class="display-6 fw-bold mb-3">Mi Trayectoria Académica</h2>
-                <p class="lead text-gray-300 mb-0">Formación profesional y especialización continua</p>
-            </div>
 
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
 
-                <div class="education-card left">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h4 class="mb-0 fw-bold">Analista Programador</h4>
-                    </div>
-                    <p class="institution">Centro de formación Técnica Inacap</p>
-                    <div class="education-period">Otoño 2020 - Otoño 2023</div>
-                    <p class="education-description">
-                        Formación profesional en análisis y desarrollo de software, con enfoque en programación y diseño
-                        de soluciones
-                        informáticas.
-                    </p>
+
+        <section id="educacion" class="education-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3">Educación</span>
+                    <h2 class="display-6 fw-bold mb-3">Mi Trayectoria Académica</h2>
+                    <p class="lead text-gray-300 mb-0">Formación profesional y especialización continua</p>
                 </div>
 
-                <div class="education-card right">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="education-icon">
-                            <i class="fas fa-laptop-code"></i>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+
+                    <div class="education-card left">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="mb-0 fw-bold">Analista Programador</h4>
                         </div>
-
-                        <h4 class="mb-0 fw-bold">Curso Apps de Software</h4>
+                        <p class="institution">Centro de formación Técnica Inacap</p>
+                        <div class="education-period">Otoño 2020 - Otoño 2023</div>
+                        <p class="education-description">
+                            Formación profesional en análisis y desarrollo de software, con enfoque en programación y
+                            diseño
+                            de soluciones
+                            informáticas.
+                        </p>
                     </div>
-                    <p class="institution">Instituto Madicap</p>
-                    <div class="education-period">01/09/2021 - 28/10/2021</div>
-                    <p class="education-description">
-                        Desarrollo de aplicación en equipo de trabajo, especialización en proyectos Java utilizando
-                        Netbeans.
-                    </p>
 
+                    <div class="education-card right">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="education-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
 
-                </div>
-
-                <div class="education-card left">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="education-icon">
-                            <i class="fas fa-certificate"></i>
+                            <h4 class="mb-0 fw-bold">Curso Apps de Software</h4>
                         </div>
-                        <h4 class="mb-0 fw-bold">Bootcamp Full Stack Python</h4>
-                    </div>
-                    <p class="institution">Desafío Latam</p>
-                    <div class="education-period">2024 - 2024</div>
-                    <p class="education-description">
-                        Certificación en proceso
-                    </p>
+                        <p class="institution">Instituto Madicap</p>
+                        <div class="education-period">01/09/2021 - 28/10/2021</div>
+                        <p class="education-description">
+                            Desarrollo de aplicación en equipo de trabajo, especialización en proyectos Java utilizando
+                            Netbeans.
+                        </p>
 
+
+                    </div>
+
+                    <div class="education-card left">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4 class="mb-0 fw-bold">Bootcamp Full Stack Python</h4>
+                        </div>
+                        <p class="institution">Desafío Latam</p>
+                        <div class="education-period">2024 - 2024</div>
+                        <p class="education-description">
+                            Certificación en proceso
+                        </p>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     </div>
     <footer class="footer">
@@ -555,21 +450,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+
         function openModal() {
-            document.getElementById('elegantModal').classList.add('show');
+            document.getElementById('elegantModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            document.getElementById('elegantModal').classList.remove('show');
+            document.getElementById('elegantModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
-        document.getElementById('elegantModal').addEventListener('click', function (e) {
-            if (e.target === this) {
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('elegantModal');
+            if (event.target === modal) {
                 closeModal();
             }
-        });
+        }
+
+
+
 
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && document.getElementById('elegantModal').classList.contains('show')) {
